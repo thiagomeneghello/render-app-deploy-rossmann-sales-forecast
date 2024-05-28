@@ -4,6 +4,8 @@ import pickle
 from flask import Flask, request, Response
 from rossmann.Rossmann import Rossmann
 import json
+import requests
+import xgboost as xgb
 
 # loading model
 model = pickle.load(open('pickle/model_rossmann.pkl', 'rb'))
