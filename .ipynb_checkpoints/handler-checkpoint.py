@@ -42,5 +42,5 @@ def rossmann_predict():
         return Response( '{}', status=200, mimetype='application/json')
 
 if __name__ == '__main__':
-    port = process.env.PORT
+    port = int(os.getenv('PORT', 5000))
     app.run(host = '0.0.0.0', port = port)
